@@ -1,0 +1,49 @@
+name: Publish node package
+
+on:
+  push:
+    tags: ["*@*"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+      - run: go test ./...
+      - run: go run ./cmd/repository build -output dist
+      - name: Select tagged package
+        id: package
+        shell: bash
+        run: |
+          package_id="${GITHUB_REF_NAME%@*}"
+          version="${GITHUB_REF_NAME#*@}"
+          archive="dist/packages/${package_id}-${version}.nodima-runner.zip"
+          test -f "$archive"
+          echo "archive=$archive" >> "$GITHUB_OUTPUT"
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" "${{ steps.package.outputs.archive }}" --verify-tag --title "$GITHUB_REF_NAME" --generate-notes
+      - uses: actions/configure-pages@v5
+      - name: Prepare Pages artifact
+        run: mkdir pages && cp dist/catalog.json pages/catalog.json
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: pages
+      - id: deployment
+        uses: actions/deploy-pages@v4

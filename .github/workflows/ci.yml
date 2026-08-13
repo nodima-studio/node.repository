@@ -1,0 +1,23 @@
+name: Validate node packages
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+      - name: Verify SDK release dependency
+        run: go list -m github.com/nodima-studio/nodima-sdk
+      - run: go test ./...
+      - run: go run ./cmd/repository build -output dist-a
+      - run: go run ./cmd/repository build -output dist-b
+      - run: diff -ru dist-a dist-b
+      - run: cmp catalog.json dist-a/catalog.json

@@ -1,0 +1,51 @@
+{
+  "formatVersion": "dbminer.node.repository.v1alpha1",
+  "packages": [
+    {
+      "id": "studio.nodima.add-prefix",
+      "summary": "Prefix every non-null string in a selected column.",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "abi": "dbminer.runner.v1alpha1",
+          "implementation": "wasm",
+          "behavior": "streaming",
+          "capabilities": [],
+          "ui": {
+            "name": "Add Prefix",
+            "group": "Text",
+            "glyph": "P+"
+          },
+          "archive": {
+            "url": "https://github.com/nodima-studio/node.repository/releases/download/studio.nodima.add-prefix@0.1.0/studio.nodima.add-prefix-0.1.0.nodima-runner.zip",
+            "sha256": "834a2f85f613a9ae46b4b3d95b61dbb6b348d1cba7f74624f0afac65f562f67c",
+            "size": 14955884
+          }
+        }
+      ]
+    },
+    {
+      "id": "studio.nodima.uppercase-text",
+      "summary": "Uppercase every non-null string in a selected column with sandboxed JavaScript.",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "abi": "dbminer.runner.v1alpha1",
+          "implementation": "javascript",
+          "behavior": "streaming",
+          "capabilities": [],
+          "ui": {
+            "name": "Uppercase Text",
+            "group": "Text",
+            "glyph": "AA"
+          },
+          "archive": {
+            "url": "https://github.com/nodima-studio/node.repository/releases/download/studio.nodima.uppercase-text@0.1.0/studio.nodima.uppercase-text-0.1.0.nodima-runner.zip",
+            "sha256": "0920b03f344f14c5b8c780ce85f69e8a62b80afa6185db76493961789cec8913",
+            "size": 2593
+          }
+        }
+      ]
+    }
+  ]
+}

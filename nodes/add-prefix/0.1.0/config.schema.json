@@ -1,0 +1,1 @@
+{"type":"object","properties":{"column":{"type":"string","minLength":1},"prefix":{"type":"string"}},"required":["column","prefix"],"additionalProperties":false}

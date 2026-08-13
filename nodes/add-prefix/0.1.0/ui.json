@@ -1,0 +1,1 @@
+{"formatVersion":"dbminer.runner.ui.v1alpha1","name":"Add Prefix","group":"Text","glyph":"P+","fields":[{"key":"column","label":"Column","kind":"text"},{"key":"prefix","label":"Prefix","kind":"text"}]}
