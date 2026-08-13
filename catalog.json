@@ -18,8 +18,8 @@
           },
           "archive": {
             "url": "https://github.com/nodima-studio/node.repository/releases/download/studio.nodima.add-prefix@0.1.0/studio.nodima.add-prefix-0.1.0.nodima-runner.zip",
-            "sha256": "834a2f85f613a9ae46b4b3d95b61dbb6b348d1cba7f74624f0afac65f562f67c",
-            "size": 14955884
+            "sha256": "232a41090ef324847a743b22af3fac4a7d1bab8877b9c3801b482537b9544b2f",
+            "size": 14955906
           }
         }
       ]

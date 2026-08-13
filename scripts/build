@@ -1,3 +1,4 @@
 #!/bin/sh
 set -eu
+export GOWORK=off
 exec go run ./cmd/repository build -output "${1:-dist}"

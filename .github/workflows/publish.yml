@@ -16,6 +16,8 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      GOWORK: "off"
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
