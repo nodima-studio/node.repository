@@ -1,0 +1,16 @@
+{
+  "formatVersion": "dbminer.runner.package.v1alpha1",
+  "id": "studio.nodima.base64-column",
+  "version": "0.1.1",
+  "abi": "dbminer.runner.v1alpha1",
+  "implementation": "wasm",
+  "entrypoint": "runner.wasm",
+  "configSchema": "config.schema.json",
+  "ui": "ui.json",
+  "readme": "README.md",
+  "icon": "icon.svg",
+  "behavior": "streaming",
+  "ports": [{"id":"input","direction":"input","required":true},{"id":"output","direction":"output","required":true}],
+  "capabilities": [],
+  "limits": {"memoryBytes":268435456,"wallTimeMillis":300000,"maxOutputBytes":268435456,"maxOutputMessages":100000,"stderrBytes":65536}
+}

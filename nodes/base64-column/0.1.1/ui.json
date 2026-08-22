@@ -1,0 +1,11 @@
+{
+  "formatVersion": "dbminer.runner.ui.v1alpha1",
+  "name": "Base64 Column",
+  "group": "Text",
+  "glyph": "ⓐ",
+  "fields": [
+    {"key":"column","label":"Column","kind":"text","placeholder":"payload","help":["Input column holding the text or bytes to transform."]},
+    {"key":"action","label":"Action","kind":"select","options":[{"value":"encode","label":"Encode to base64"},{"value":"decode","label":"Decode base64"}],"help":["Encode turns the column values into base64 text.","Decode turns base64 text back into its original content."]},
+    {"key":"encoding","label":"Encoding","kind":"select","options":[{"value":"standard","label":"Standard"},{"value":"url","label":"URL-safe"}],"help":["Standard uses + and / with = padding.","URL-safe uses - and _ so the text fits in URLs and query strings."]}
+  ]
+}

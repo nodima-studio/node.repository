@@ -44,6 +44,23 @@
             "sha256": "b8b03f7be1fb15dde31a7f96de5b9690e7cf98d5d53d547ec8f7d51426593c52",
             "size": 14967764
           }
+        },
+        {
+          "version": "0.1.1",
+          "abi": "dbminer.runner.v1alpha1",
+          "implementation": "wasm",
+          "behavior": "streaming",
+          "capabilities": [],
+          "ui": {
+            "name": "Base64 Column",
+            "group": "Text",
+            "glyph": "ⓐ"
+          },
+          "archive": {
+            "url": "https://github.com/nodima-studio/node.repository/releases/download/studio.nodima.base64-column@0.1.1/studio.nodima.base64-column-0.1.1.nodima-runner.zip",
+            "sha256": "001d246f6f4906bc5eb6793f490d59dbf02ae125df4cb77e70f0de69cdbd9baf",
+            "size": 14968720
+          }
         }
       ]
     },
