@@ -8,6 +8,7 @@
   "configSchema": "config.schema.json",
   "ui": "ui.json",
   "readme": "README.md",
+  "icon": "icon.svg",
   "behavior": "streaming",
   "ports": [{"id":"input","direction":"input","required":true},{"id":"output","direction":"output","required":true}],
   "capabilities": [],
