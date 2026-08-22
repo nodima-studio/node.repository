@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "column": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Input column holding the text or bytes to transform."
+    },
+    "action": {
+      "type": "string",
+      "enum": ["encode", "decode"],
+      "default": "encode",
+      "description": "Encode to base64 or decode base64 back to text."
+    },
+    "encoding": {
+      "type": "string",
+      "enum": ["standard", "url"],
+      "default": "standard",
+      "description": "Standard padded base64 or URL-safe base64."
+    }
+  },
+  "required": ["column", "action", "encoding"],
+  "additionalProperties": false
+}

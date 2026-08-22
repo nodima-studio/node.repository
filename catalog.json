@@ -18,8 +18,31 @@
           },
           "archive": {
             "url": "https://github.com/nodima-studio/node.repository/releases/download/studio.nodima.add-prefix@0.1.0/studio.nodima.add-prefix-0.1.0.nodima-runner.zip",
-            "sha256": "232a41090ef324847a743b22af3fac4a7d1bab8877b9c3801b482537b9544b2f",
-            "size": 14955906
+            "sha256": "d56780117020f941e6706881be406fe1e89089380f7b9407dc0f454611284f58",
+            "size": 14956482
+          }
+        }
+      ]
+    },
+    {
+      "id": "studio.nodima.base64-column",
+      "summary": "Encode a text or bytes column to Base64, or decode Base64 text.",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "abi": "dbminer.runner.v1alpha1",
+          "implementation": "wasm",
+          "behavior": "streaming",
+          "capabilities": [],
+          "ui": {
+            "name": "Base64 Column",
+            "group": "Text",
+            "glyph": "ⓐ"
+          },
+          "archive": {
+            "url": "https://github.com/nodima-studio/node.repository/releases/download/studio.nodima.base64-column@0.1.0/studio.nodima.base64-column-0.1.0.nodima-runner.zip",
+            "sha256": "b8b03f7be1fb15dde31a7f96de5b9690e7cf98d5d53d547ec8f7d51426593c52",
+            "size": 14967764
           }
         }
       ]
